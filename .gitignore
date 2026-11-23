@@ -1,0 +1,33 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Local SQLite database files
+*.db
+*.sqlite
+*.sqlite3
+contacts.db
+
+# Generated backups and reports (keep README.md)
+backups/*
+!backups/README.md
+reports/*
+!reports/README.md
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
