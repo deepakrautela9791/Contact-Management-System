@@ -1,0 +1,6 @@
+# Contact Management System - Dependencies
+# Core application uses only Python 3.10+ built-in standard libraries:
+# tkinter, sqlite3, hashlib, csv, os, re, datetime, shutil, unittest
+
+# Optional: Only needed if you want to package the app into a Windows .exe
+pyinstaller>=6.0.0
