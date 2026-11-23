@@ -5,6 +5,7 @@ parameterized queries, and safe backup/restore operations.
 """
 
 import hashlib
+import hmac
 import os
 import sqlite3
 from datetime import datetime
@@ -34,7 +35,8 @@ def verify_password(password: str, stored_hash: str) -> bool:
         salt_hex, hash_hex = stored_hash.split(":", 1)
         salt = bytes.fromhex(salt_hex)
         expected = hash_password(password, salt)
-        return hashlib.compare_digest(expected, stored_hash)
+        return hmac.compare_digest(expected, stored_hash)
+# .hashlib.compare_digest(expected, stored_hash)
     except (ValueError, TypeError):
         return False
 
